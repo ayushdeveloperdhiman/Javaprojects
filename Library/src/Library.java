@@ -9,7 +9,7 @@ public class Library {
         System.out.println("Number of books : "+numberOfBooks);
         System.out.println("Number of employees working : "+numberOfEmployees);
         System.out.println("Subject books available :\r");
-        for(int i=0;(i<=subjects.length-1);i++){
+        for(int i=0;i<=(subjects.length-1);i++){
             System.out.println((i+1)+" : "+subjects[i]);
         }
         checkBook();
