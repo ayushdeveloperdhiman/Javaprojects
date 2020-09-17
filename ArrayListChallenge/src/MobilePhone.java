@@ -31,10 +31,13 @@ public class MobilePhone {
         if (findContact(oldContact) < 0) {
             System.out.println(oldContact.getName() + ", was not found.");
             return false;
+        }else if(findContact(newContact.getName())!=-1) {
+            System.out.println("Contact with the name "+newContact.getName()+" already exists.\nUpdate was not successful");
+            return false;
         }
-        myContacts.set(findContact(oldContact), newContact);
-        System.out.println(oldContact.getName() + " ,was replaced with " + newContact.getName());
-        return true;
+            myContacts.set(findContact(oldContact), newContact);
+            System.out.println(oldContact.getName() + " ,was replaced with " + newContact.getName());
+            return true;
     }
 
     private int findContact(Contacts contact) {

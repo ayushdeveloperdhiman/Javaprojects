@@ -99,7 +99,7 @@ public class Main {
     }
     private static void printActions() {
         System.out.println("\nAvailable actions\nPress");
-        System.out.println("0 - To shutdown\n1 - To print contacts\n2 - To add new contact\n3 - To update existing contact\n4 - To remove an existing contact\n5 - Query if an contact exists\n6 - To print list of available actions");
+        System.out.println("0 - To shutdown\n1 - To print contacts\n2 - To add new contact\n3 - To update an existing contact\n4 - To remove an existing contact\n5 - Query if an contact exists\n6 - To print list of available actions");
         System.out.println("Choose your action: ");
     }
 }
