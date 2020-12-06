@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class MobilePhone {
     private String myNumber;
+    
     ArrayList<Contacts> myContacts;
 
     public MobilePhone(String myNumber) {

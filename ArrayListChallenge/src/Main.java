@@ -95,7 +95,7 @@ public class Main {
             System.out.println("Contact not found");
             return;
         }
-        System.out.println("Name :"+existingContactRecord.getName()+" phone number "+existingContactRecord.getPhoneNumber());
+        System.out.println("Name :"+existingContactRecord.getName()+" phone number "+existingContactRecord.getPhoneNumber()+" is on the list");
     }
     private static void printActions() {
         System.out.println("\nAvailable actions\nPress");
