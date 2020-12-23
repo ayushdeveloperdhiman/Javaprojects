@@ -5,7 +5,6 @@ public class Contacts {
     public String getName() {
         return name;
     }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
