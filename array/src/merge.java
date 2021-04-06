@@ -8,7 +8,6 @@ public class merge {
         {
             arr3[i]=arr1[i];
         }
-        System.out.println("i  =  "+i);
 
         for(int j=0;j<arr2.length;j++)
         {
