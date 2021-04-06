@@ -8,10 +8,8 @@ public class prime2 {
         int count=0,j;
         for(int i=2;i<=n;i++)
         {
-            for(j=2;j<i;j++)
-            {
-                if(i%j==0)
-                {
+            for(j=2;j<i;j++) {
+                if (i % j == 0) {
                     break;
                 }
             }
