@@ -14,7 +14,7 @@ public class linearSearch {
             }
         }
         if(f==0){
-            System.out.printf("Element not found");
+            System.out.println("Element not found");
         }
     }
 }
