@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public class Salary {
     public static void main(String[] args) {
         calculateSalary(20000,10,"Female");
