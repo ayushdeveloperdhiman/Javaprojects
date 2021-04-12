@@ -6,6 +6,7 @@ public class Salary {
         calculateSalary(100000,8,"male");
         calculateSalary(40000,3,"male");
         calculateSalary(20000,1,"male");
+        calculateSalary(20000,1,"m");
     }
 
     public static void calculateSalary(double currentSalary, int workingYear, String gender) {
@@ -45,5 +46,6 @@ public class Salary {
                 System.out.println("");
             }
         }
+
     }
 }
