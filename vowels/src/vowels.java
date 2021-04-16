@@ -1,7 +1,7 @@
 public class vowels {
     public static void main(String[] args) {
         System.out.println(fun("abcdefghijklmnopqrstuvwxyz"));
-        String str="HellO";
+   
         
     }
     static int fun(String str){
