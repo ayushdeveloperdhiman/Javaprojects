@@ -36,15 +36,15 @@ public class Main {
         }
 
         Integer myIntValue=54;//Integer.valueOf(54)
-        int i=myIntValue;//myIntValue.intValue
+        int i=myIntValue;//myIntValue.intValue 
 
         ArrayList<Double> dblArrayList=new ArrayList<>();
         for(double d=0.0;d<=10.0;d+=0.5){
             dblArrayList.add(d);
         }
         for(int d=0;d<dblArrayList.size();d++){
-            double db=dblArrayList.get(d).doubleValue();
-            System.out.println(db);
+            //double db=dblArrayList.get(d).doubleValue();
+            System.out.println(dblArrayList.get(d));
         }
 
     }
