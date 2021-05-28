@@ -60,13 +60,4 @@ public class Bank {
         }
         return false;
     }
-    public static void main(String[] args){
-        Bank bank=new Bank("PNB");
-        bank.addBranch("rait");
-        bank.addCustomer("rait","Ayush",50.0);
-        bank.addCustomer("rait","Dhiman",20.0);
-        bank.addCustomer("rait","AD",210.0);
-        bank.addCustomerTransaction("rait","Ayush",10.10);
-        bank.listCustomers("rait",true);
-    }
 }

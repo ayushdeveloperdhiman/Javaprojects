@@ -29,13 +29,10 @@ public class Album {
         return null;
     }
 
-    public boolean addToPlayList(int numberOfSongs, LinkedList<Song> playlist) {
-        if(numberOfSongs<=0&&numberOfSongs>songs.size()){
-            return false;
-        }
-        Song foundSong = findSong(songs.get(numberOfSongs - 1).getTitle());
-        if (foundSong != null) {
-            playlist.add(foundSong);
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> playlist) {
+        int index=trackNumber-1;
+        if(trackNumber>0&&trackNumber<=songs.size()){
+            playlist.add(this.songs.get(index));
             return true;
         }
         return false;
