@@ -14,8 +14,11 @@ public class Main {
         System.out.println(ayush);
         ayush.setWeapon("Stormbringer");
         saveObject(ayush);
-        loadObject(ayush);
+        //loadObject(ayush);
         System.out.println(ayush);
+
+        Player player=new Player("Anshu",45,12);
+        saveObject(player);
 
         ISaveable werewolf = new Monster("Werewolf", 20, 40);
         System.out.println("Strength = " + ((Monster) werewolf).getStrength());
