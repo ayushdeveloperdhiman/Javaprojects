@@ -9,16 +9,32 @@ public class Main {
 
     public static void main(String[] args) {
         Theater theater = new Theater("Olympian", 8, 12);
-        List<Theater.Seat> seatCopy=new ArrayList<>(theater.seats);
-        printList(seatCopy);
 
-        seatCopy.get(1).reserve();
-        if(theater.reserveSeat("A02")){
-            System.out.println("Pay");
+        if(theater.reserveSeat("D12")){
+            System.out.println("Please pay for D12.");
         }else{
             System.out.println("Seat already reserved");
         }
-        Collections.shuffle(seatCopy);
+        if(theater.reserveSeat("D12")){
+            System.out.println("Please pay for D12.");
+        }else{
+            System.out.println("Seat already reserved");
+        }
+        if(theater.reserveSeat("B13")){
+            System.out.println("Please pay for B13.");
+        }else{
+            System.out.println("Seat already reserved");
+        }
+        List<Theater.Seat> reverseSeat=new ArrayList<>(theater.getSeats());
+        Collections.reverse(reverseSeat);
+        printList(reverseSeat);
+
+        List<Theater.Seat> priceSeats=new ArrayList<>(theater.getSeats());
+        priceSeats.add(theater.new Seat("B00",13.00));
+        priceSeats.add(theater.new Seat("A00",13.00));
+        Collections.sort(priceSeats,theater.PRICE_ORDER);
+        printList(priceSeats);
+        /*Collections.shuffle(seatCopy);
         System.out.println("Printing seat copy ");
         printList(seatCopy);
         System.out.println("Printing Theater.seats");
@@ -27,9 +43,9 @@ public class Main {
         Theater.Seat minSeat=Collections.min(seatCopy);
         System.out.println("Max seat "+maxSeat.getSeatNumber());
         System.out.println("Min seat "+minSeat.getSeatNumber());
-        sortList(seatCopy);
+        //sortList(seatCopy);
         System.out.println("Sorted seat copy:");
-        printList(seatCopy);
+        printList(seatCopy);*/
     /*  theater.getSeat();
         if (theater.reserveSeat("H11")) {
             System.out.println("Please pay");
@@ -45,12 +61,12 @@ public class Main {
     }
     public static void printList(List<Theater.Seat> list){
         for(Theater.Seat seat:list){
-            System.out.print(" "+seat.getSeatNumber());
+            System.out.print(" "+seat.getSeatNumber()+" $"+seat.getPrice());
         }
         System.out.println();
         System.out.println("========================================================================");
     }
-    public static void sortList(List<? extends Theater.Seat> list){
+    /*public static void sortList(List<? extends Theater.Seat> list){
         for(int i=0;i<list.size();i++){
             for(int j=i+1;j<list.size();j++){
                 if(list.get(i).compareTo(list.get(j))>0){
@@ -58,5 +74,5 @@ public class Main {
                 }
             }
         }
-    }
+    }*/
 }
