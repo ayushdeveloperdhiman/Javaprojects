@@ -61,6 +61,41 @@ class LinkedList {
         }
     }
 
+    public void display(){
+        Node temp=this.head;
+        while(temp!=null){
+            System.out.println(temp.getData());
+            temp=temp.getNext();
+        }
+    }
+    public void insert(String data,String dataBefore){
+        Node node=new Node(data);
+        if(this.head==null){
+            this.head=this.tail=node;
+        }else{
+            Node nodeBefore=find(dataBefore);
+            if(nodeBefore!=null){
+                node.setNext(nodeBefore.getNext());
+                nodeBefore.setNext(node);
+                if(nodeBefore==this.tail){
+                    this.tail=node;
+                }else{
+                    System.out.println("Node not found");
+                }
+            }
+        }
+    }
+    public Node find(String data){
+        Node temp=this.head;
+        while(temp!=null) {
+            if (temp.getData().equals(data)) {
+                return temp;
+            }
+            temp = temp.getNext();
+        }
+        return null;
+    }
+
 }
 
 class Tester{
@@ -71,8 +106,18 @@ class Tester{
         list.addAtEnd("Venice");
         list.addAtEnd("Munich");
         list.addAtBeginning("Nice");
-        System.out.println(list.getHead().getData());
-        System.out.println(list.getHead().getNext().getNext().getData());
+        list.insert("Ayush","");
+        list.display();
+        if(list.find("Munich")!=null){
+            System.out.println("Item found");
+        }else{
+            System.out.println("Item not found");
+        }
+        if(list.find("Ravi")!=null){
+            System.out.println("Item found");
+        }else{
+            System.out.println("Item not found");
+        }
 
     }
 }
