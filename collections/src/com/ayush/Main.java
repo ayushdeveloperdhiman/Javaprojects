@@ -1,7 +1,6 @@
 package com.ayush;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -9,7 +8,6 @@ public class Main {
 
     public static void main(String[] args) {
         Theater theater = new Theater("Olympian", 8, 12);
-
         if(theater.reserveSeat("D12")){
             System.out.println("Please pay for D12.");
         }else{

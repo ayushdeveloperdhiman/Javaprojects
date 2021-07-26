@@ -5,7 +5,7 @@ import java.util.*;
 public class Theater {
     private final String theatreName;
     private List<Seat> seats = new ArrayList<>();
-    public final Comparator<Seat> PRICE_ORDER=new Comparator<Seat>() {
+    static final Comparator<Seat> PRICE_ORDER=new Comparator<Seat>() {
         @Override
         public int compare(Seat seat1, Seat seat2) {
             if(seat1.getPrice()>seat2.getPrice()){
