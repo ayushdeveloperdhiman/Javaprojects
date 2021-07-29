@@ -3,8 +3,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MapProgramming {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         Map<String, String> language = new HashMap<>();
         language.put("Java", "a compiled high level, object-oriented, platform independent language");
         language.put("Python", "an interpreted, object oriented, high-level programming language with dynamic semantics");
