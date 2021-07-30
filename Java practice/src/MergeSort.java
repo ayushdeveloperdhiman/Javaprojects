@@ -15,7 +15,7 @@ public class MergeSort {
     }
     static void merge(int[] arr)
     {
-        
+
     }
 
     static void sort(int arr[], int beg, int end)
