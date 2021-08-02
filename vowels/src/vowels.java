@@ -1,8 +1,11 @@
+import java.util.Scanner;
+
 public class vowels {
     public static void main(String[] args) {
-        System.out.println(fun("abcdefghijklmnopqrstuvwxyz"));
-   
-        
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter a string");
+        String str=s.nextLine();
+        System.out.println(fun(str));
     }
     static int fun(String str){
         int count=0;
