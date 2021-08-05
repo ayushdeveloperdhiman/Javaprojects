@@ -10,33 +10,37 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Map<String,Integer> temp=new HashMap<>();
+        locations.put(0, new Location(0, "You are sitting in front of a computer learning Java",temp));
+        temp=new HashMap<>();
+        temp.put("W",2);
+        temp.put("E",3);
+        temp.put("S",4);
+        temp.put("N",5);
+        locations.put(1,new Location(1,"You are standing at the end of a road before a small brick building",temp));
+        //tem.put("Q",0);
+        temp=new HashMap<>();
+        temp.put("N",5);
+        locations.put(2, new Location(2, "You are at the top of a hill",temp));
 
-        locations.put(0, new Location(0, "You are sitting in front of a computer learning Java"));
-        locations.put(1, new Location(1, "You are standing at the end of a road before a small brick building"));
-        locations.put(2, new Location(2, "You are at the top of a hill"));
-        locations.put(3, new Location(3, "You are inside a building, a well house for a small spring"));
-        locations.put(4, new Location(4, "You are in a valley beside a stream"));
-        locations.put(5, new Location(5, "You are in the forest"));
+        //tem.put("Q",0);
+        temp=new HashMap<>();
+        temp.put("W",1);
+        locations.put(3, new Location(3, "You are inside a building, a well house for a small spring",temp));
 
-        locations.get(1).addExits("W",2);
-        locations.get(1).addExits("E",3);
-        locations.get(1).addExits("S",4);
-        locations.get(1).addExits("N",5);
-        //locations.get(1).addExits("Q",0);
+        //tem.put("Q",0);
+        temp=new HashMap<>();
+        temp.put("N",1);
+        temp.put("W",2);
+        locations.put(4, new Location(4, "You are in a valley beside a stream",temp));
 
-        locations.get(2).addExits("N",5);
-        //locations.get(2).addExits("Q",0);
+        //tem.put("Q",0);
+        temp=new HashMap<>();
+        temp.put("S",1);
+        temp.put("W",2);
+        locations.put(5, new Location(5, "You are in the forest", temp));
 
-        locations.get(3).addExits("W",1);
-        //locations.get(3).addExits("Q",0);
-
-        locations.get(4).addExits("N",1);
-        locations.get(4).addExits("W",2);
-        //locations.get(4).addExits("Q",0);
-
-        locations.get(5).addExits("S",1);
-        locations.get(5).addExits("W",2);
-        //locations.get(5).addExits("Q",0);
+        //tem.put("Q",0);
         Map<String,String> vocabulary=new HashMap<>();
         vocabulary.put("QUIT","Q");
         vocabulary.put("NORTH","N");
