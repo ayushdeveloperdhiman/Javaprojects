@@ -32,12 +32,28 @@ public class Main2 {
             boolean b=s.hasNextInt();
             if(b) {
                 id = s.nextInt();
+                if(id<=0 || id> productArrayList.size()){
+                    System.out.println("Invalid id");
+                    continue;
+                }
                 if(id<= productArrayList.size()){
-                    System.out.println("Enter how much quantity you want :");
-                    int quantity = s.nextInt();
-                    Product product = productArrayList.get(id - 1);
-                    System.out.println("Your bill is: " + product.getPrice() * quantity);
-                    loop=false;
+                    while(true){
+                        System.out.println("Enter how much quantity you want :");
+                        b=s.hasNextInt();
+                        if(b){
+                            int quantity = s.nextInt();
+                            Product product = productArrayList.get(id - 1);
+                            System.out.println("Your bill is: " + product.getPrice() * quantity);
+                            loop=false;
+                            break;
+                        }else{
+                            System.out.println("Invalid input");
+                            s.next();
+                            continue;
+                        }
+                    }
+
+
                 }else {
                     System.out.println("Invalid id");
                     s.next();
