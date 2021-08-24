@@ -25,46 +25,61 @@ public class Main2 {
         while (iterator.hasNext()){
             System.out.println(iterator.next());
         }
-        boolean loop=true;
-        while(loop) {
-            int id=0;
-            System.out.println("Enter the number for the item you want :");
-            boolean b=s.hasNextInt();
-            if(b) {
-                id = s.nextInt();
-                if(id<=0 || id> productArrayList.size()){
-                    System.out.println("Invalid id");
-                    continue;
-                }
-                if(id<= productArrayList.size()){
-                    while(true){
-                        System.out.println("Enter how much quantity you want :");
-                        b=s.hasNextInt();
-                        if(b){
-                            int quantity = s.nextInt();
-                            Product product = productArrayList.get(id - 1);
-                            System.out.println("Your bill is: " + product.getPrice() * quantity);
-                            loop=false;
-                            break;
-                        }else{
-                            System.out.println("Invalid input");
-                            s.next();
-                            continue;
-                        }
+        int total=0;
+        while(true){
+            boolean loop=true;
+            while(loop) {
+                int id=0;
+                System.out.println("Enter the number for the item you want :");
+                boolean b=s.hasNextInt();
+                if(b) {
+                    id = s.nextInt();
+                    if(id<=0 || id> productArrayList.size()){
+                        System.out.println("Invalid id");
+                        continue;
                     }
+                    if(id<= productArrayList.size()){
+                        while(true){
+                            System.out.println("Enter how much quantity you want :");
+                            b=s.hasNextInt();
+                            if(b){
+                                int quantity = s.nextInt();
+                                Product product = productArrayList.get(id - 1);
+                                System.out.println("You Purchased: ");
+                                System.out.println(product.getName()+" Price: "+product.getPrice()+" * "+quantity+"="+product.getPrice()*quantity);
+                                total+=product.getPrice()*quantity;
+                                loop=false;
+                                break;
+                            }else{
+                                System.out.println("Invalid input");
+                                s.next();
+                                continue;
+                            }
+                        }
 
 
-                }else {
-                    System.out.println("Invalid id");
+                    }else {
+                        System.out.println("Invalid id");
+                        s.next();
+                        continue;
+                    }
+                }else{
+                    System.out.println("Invalid character");
                     s.next();
                     continue;
                 }
-            }else{
-                System.out.println("Invalid character");
-                s.next();
-                continue;
+
             }
 
+            System.out.println("Enter Y to continue or N to terminate: ");
+            String ch=s.next();
+            if(ch.toLowerCase().equals("y")){
+                continue;
+            }else if(ch.toLowerCase().equals("n")){
+                System.out.println("Your total is "+total);
+                break;
+            }
         }
+
     }
 }
