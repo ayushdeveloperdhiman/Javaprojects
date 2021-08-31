@@ -1,17 +1,17 @@
 class Node {
-    private String data;
+    private int data;
     private Node next;
 
-    public Node(String data){
+    public Node(int data){
         this.data=data;
     }
-    public void setData(String data){
+    public void setData(int data){
         this.data = data;
     }
     public void setNext(Node node){
         this.next = node;
     }
-    public String getData(){
+    public int getData(){
         return this.data;
     }
     public Node getNext(){
@@ -30,25 +30,20 @@ class LinkedList {
     public Node getTail(){
         return this.tail;
     }
-    public void addAtEnd(String data){
-        //Create a new node
+    public void addAtEnd(int data){
         Node node = new Node(data);
 
-        //Check if the list is empty,
-        //if yes, make the node as the head and the tail
         if(this.head == null)
             this.head=this.tail=node;
         else{
-            //If the list is not empty, add the element at the end
             this.tail.setNext(node);
-            //Make the new node as the tail
             this.tail=node;
         }
 
     }
 
 
-    public void addAtBeginning(String data){
+    public void addAtBeginning(int data){
         Node node=new Node(data);
         if(this.head == null) {
             this.head = this.tail = node;
@@ -68,7 +63,7 @@ class LinkedList {
             temp=temp.getNext();
         }
     }
-    public void insert(String data,String dataBefore){
+    public void insert(int data,int dataBefore){
         Node node=new Node(data);
         if(this.head==null){
             this.head=this.tail=node;
@@ -85,10 +80,10 @@ class LinkedList {
             }
         }
     }
-    public Node find(String data){
+    public Node find(int data){
         Node temp=this.head;
         while(temp!=null) {
-            if (temp.getData().equals(data)) {
+            if (temp.getData()==data) {
                 return temp;
             }
             temp = temp.getNext();
@@ -102,18 +97,18 @@ class Tester{
 
     public static void main(String args[]){
         LinkedList list = new LinkedList();
-        list.addAtEnd("Milan");
-        list.addAtEnd("Venice");
-        list.addAtEnd("Munich");
-        list.addAtBeginning("Nice");
-        list.insert("Ayush","");
+        list.addAtEnd(5);
+        list.addAtEnd(10);
+        list.addAtEnd(7);
+        list.addAtBeginning(15);
+        list.insert(14,10);
         list.display();
-        if(list.find("Munich")!=null){
+        if(list.find(25)!=null){
             System.out.println("Item found");
         }else{
             System.out.println("Item not found");
         }
-        if(list.find("Ravi")!=null){
+        if(list.find(15)!=null){
             System.out.println("Item found");
         }else{
             System.out.println("Item not found");
