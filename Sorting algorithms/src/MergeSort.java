@@ -1,7 +1,3 @@
-/*
-time complexity best=worst=average=O(n log n)
-space complexity=O(n)
- */
 class MergeSort
 {
     void merge(int arr[], int start, int middle, int end)
