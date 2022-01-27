@@ -1,28 +1,24 @@
 import java.util.Arrays;
 
 public class Anagram {
-    static void isAnagram(String str1, String str2) {
+    static boolean isAnagram(String str1, String str2) {
         String s1 = str1.replaceAll(" ", "");
         String s2 = str2.replaceAll(" ", "");
-        boolean status = true;
+
         if (s1.length() != s2.length()) {
-            status = false;
+           return false;
         } else {
             char[] ArrayS1 = s1.toLowerCase().toCharArray();
             char[] ArrayS2 = s2.toLowerCase().toCharArray();
             Arrays.sort(ArrayS1);
             Arrays.sort(ArrayS2);
-            status = Arrays.equals(ArrayS1, ArrayS2);
-        }
-        if (status) {
-            System.out.println(s1 + " and " + s2 + " are anagrams");
-        } else {
-            System.out.println(s1 + " and " + s2 + " are not anagrams");
+            return Arrays.equals(ArrayS1, ArrayS2);
         }
     }
 
     public static void main(String[] args) {
-        isAnagram("listen", "silence");
-        isAnagram("abcd","cdba");
+        System.out.println(isAnagram("listen", "silence"));
+        System.out.println(isAnagram("abcd","cdba"));
+        System.out.println(isAnagram("Army","Mary"));
     }
 }

@@ -11,7 +11,6 @@ public class MultiThreading extends Thread{
             try {
                 Thread.sleep(1000);
             }catch(Exception ignored){
-
             }
         }
     }
