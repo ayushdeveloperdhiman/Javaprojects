@@ -46,6 +46,7 @@ public class GearBox {
         public Gear(int gearNumber,double ratio){
             this.gearNumber=gearNumber;
             this.ratio=ratio;
+           // GearBox.this.currentGear=0; this is the way to access the outer class variables
             
         }
         public double driveSpeed(int rev){
