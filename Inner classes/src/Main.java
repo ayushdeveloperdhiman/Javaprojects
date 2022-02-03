@@ -5,7 +5,8 @@ public class Main {
     static Button btnPrint=new Button("Print");
     public static void main(String[] args){
         /*GearBox mcLaren=new GearBox(6);
-        mcLaren.operateClutch(true);
+        mcLaren.operateClutch(true);                       to create instance of inner class
+                                                           use GearBox.Gear=mcLaren.new Gear();
         mcLaren.changeGear(1);
         mcLaren.operateClutch(false);
         System.out.println(mcLaren.wheelSpeed(1000));
