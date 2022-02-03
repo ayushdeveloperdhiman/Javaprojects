@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args){
         /*GearBox mcLaren=new GearBox(6);
         mcLaren.operateClutch(true);                       to create instance of inner class
-                                                           use GearBox.Gear=mcLaren.new Gear();
+                                                           use GearBox.Gear obj=mcLaren.new Gear();
         mcLaren.changeGear(1);
         mcLaren.operateClutch(false);
         System.out.println(mcLaren.wheelSpeed(1000));
@@ -18,6 +18,8 @@ public class Main {
         System.out.println(mcLaren.wheelSpeed(6000));
         mcLaren.operateClutch(true);
         System.out.println(mcLaren.wheelSpeed(6000)):*/
+
+
         /*class ClickListener implements Button.OnClickListener{
             public ClickListener(){
                 System.out.println("I've been attached.");
@@ -27,6 +29,9 @@ public class Main {
             }
         }
         btnPrint.setOnClickListener(new ClickListener());*/
+
+
+        
         btnPrint.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(String tittle) {

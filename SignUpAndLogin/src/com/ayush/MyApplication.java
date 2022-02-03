@@ -54,4 +54,26 @@ public class MyApplication {
         }
         return false;
     }
+    private class User {
+        private String username;
+        private String password;
+        private String gender;
+        private int age;
+
+        protected User(String username,String password,String gender,int age){
+            this.username=username;
+            this.password=password;
+            this.gender=gender;
+            this.age=age;
+        }
+
+        private String getUsername() {
+            return username;
+        }
+
+        private String getPassword() {
+            return password;
+        }
+
+    }
 }
